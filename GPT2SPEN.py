@@ -87,15 +87,16 @@ class GPT2ForSequenceClassification(GPT2PreTrainedModel):
         hidden_states = self.dense2(hidden_states)
         
         logits = self.score(hidden_states)
-
-        if input_ids is not None:
-            batch_size, sequence_length = input_ids.shape[:2]
+        
+        if input_ids_title is not None:
+            batch_size, sequence_length = input_ids_title.shape[:2]
         else:
             batch_size, sequence_length = inputs_embeds.shape[:2]
 
         assert (
             self.config.pad_token_id is not None or batch_size == 1
         ), "Cannot handle batch sizes > 1 if no padding token is defined."
+        
         if self.config.pad_token_id is None:
             sequence_lengths = -1
         else:
@@ -107,7 +108,7 @@ class GPT2ForSequenceClassification(GPT2PreTrainedModel):
                     f"{self.__class__.__name__} will not detect padding tokens in `inputs_embeds`. Results may be "
                     f"unexpected if using padding tokens in conjunction with `inputs_embeds.`"
                 )
-
+        
         pooled_logits = logits[range(batch_size), sequence_lengths]
 
         loss = None

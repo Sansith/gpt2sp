@@ -1,0 +1,86 @@
+Epochs 0
+MAE: 10.624168
+MdAE: 6.474993
+
+Epochs 1
+MAE: 12.528188
+MdAE: 14.203505
+
+Epochs 2
+MAE: 5.358273
+MdAE: 3.3544974
+
+Epochs 3
+MAE: 10.0609
+MdAE: 10.807355
+
+Epochs 4
+MAE: 8.361772
+MdAE: 8.140391
+
+Epochs 5
+MAE: 6.25763
+MdAE: 5.3870406
+
+Epochs 6
+MAE: 7.494173
+MdAE: 6.690261
+
+Epochs 7
+MAE: 6.650706
+MdAE: 5.280467
+
+Epochs 8
+MAE: 6.3647456
+MdAE: 5.3215055
+
+Epochs 9
+MAE: 6.6580772
+MdAE: 5.292789
+
+Epochs 10
+MAE: 6.6488276
+MdAE: 5.2773266
+
+Epochs 11
+MAE: 6.9844017
+MdAE: 5.838217
+
+Epochs 12
+MAE: 6.5726166
+MdAE: 5.1499453
+
+Epochs 13
+MAE: 6.7541127
+MdAE: 5.4533033
+
+Epochs 14
+MAE: 6.7245793
+MdAE: 5.403941
+
+Epochs 15
+MAE: 6.711382
+MdAE: 5.3818808
+
+Epochs 16
+MAE: 6.778448
+MdAE: 5.493979
+
+Epochs 17
+MAE: 6.945934
+MdAE: 5.773918
+
+Epochs 18
+MAE: 6.858814
+MdAE: 5.6283045
+
+Epochs 19
+MAE: 6.716931
+MdAE: 5.3911552
+
+MODEL:google/bigbird-roberta-base, TOKENIZER:google/bigbird-roberta-base
+MAE: 10.0609  MdAE: 10.807355
+training time: 15.084885835647583
+Epochs: 3
+batch size: 209
+Description added : False

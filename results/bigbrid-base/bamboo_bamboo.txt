@@ -1,0 +1,86 @@
+Epochs 0
+MAE: 20.925812
+MdAE: 20.802582
+
+Epochs 1
+MAE: 12.342018
+MdAE: 12.465825
+
+Epochs 2
+MAE: 5.1926055
+MdAE: 5.0687966
+
+Epochs 3
+MAE: 4.418717
+MdAE: 4.5425262
+
+Epochs 4
+MAE: 3.1277878
+MdAE: 3.0039783
+
+Epochs 5
+MAE: 1.9855407
+MdAE: 2.1093502
+
+Epochs 6
+MAE: 1.0118665
+MdAE: 0.53820395
+
+Epochs 7
+MAE: 0.90802926
+MdAE: 0.72299886
+
+Epochs 8
+MAE: 0.95433074
+MdAE: 0.6405983
+
+Epochs 9
+MAE: 0.80472785
+MdAE: 0.90684056
+
+Epochs 10
+MAE: 1.0571914
+MdAE: 0.5424595
+
+Epochs 11
+MAE: 0.76541847
+MdAE: 0.8946966
+
+Epochs 12
+MAE: 0.8711452
+MdAE: 0.78864026
+
+Epochs 13
+MAE: 0.82928807
+MdAE: 0.8631315
+
+Epochs 14
+MAE: 0.86744636
+MdAE: 0.795223
+
+Epochs 15
+MAE: 0.8067757
+MdAE: 0.90319586
+
+Epochs 16
+MAE: 0.8920885
+MdAE: 0.7513685
+
+Epochs 17
+MAE: 0.7693822
+MdAE: 0.86268234
+
+Epochs 18
+MAE: 0.9103452
+MdAE: 0.7188778
+
+Epochs 19
+MAE: 0.9338869
+MdAE: 0.67698145
+
+MODEL:google/bigbird-roberta-base, TOKENIZER:google/bigbird-roberta-base
+MAE: 0.76541847  MdAE: 0.8946966
+training time: 27.7878258228302
+Epochs: 11
+batch size: 93
+Description added : False

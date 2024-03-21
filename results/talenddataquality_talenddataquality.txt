@@ -1,0 +1,87 @@
+Epochs 0
+MAE: 3.3373122
+MdAE: 3.056332
+
+Epochs 1
+MAE: 3.0938072
+MdAE: 3.414929
+
+Epochs 2
+MAE: 6.0356483
+MdAE: 6.6117325
+
+Epochs 3
+MAE: 3.5666325
+MdAE: 3.3692474
+
+Epochs 4
+MAE: 3.8342586
+MdAE: 3.7344313
+
+Epochs 5
+MAE: 4.1270113
+MdAE: 4.1339025
+
+Epochs 6
+MAE: 2.8417487
+MdAE: 3.067884
+
+Epochs 7
+MAE: 3.945611
+MdAE: 3.886376
+
+Epochs 8
+MAE: 3.3613584
+MdAE: 3.0891442
+
+Epochs 9
+MAE: 3.8822064
+MdAE: 3.7998576
+
+Epochs 10
+MAE: 3.413078
+MdAE: 3.1597166
+
+Epochs 11
+MAE: 3.503424
+MdAE: 3.2829976
+
+Epochs 12
+MAE: 4.067939
+MdAE: 4.0532956
+
+Epochs 13
+MAE: 3.492833
+MdAE: 3.2685452
+
+Epochs 14
+MAE: 3.721563
+MdAE: 3.5806556
+
+Epochs 15
+MAE: 3.2723367
+MdAE: 3.0486126
+
+Epochs 16
+MAE: 3.4094918
+MdAE: 3.1548243
+
+Epochs 17
+MAE: 3.431006
+MdAE: 3.1841803
+
+Epochs 18
+MAE: 3.5950449
+MdAE: 3.4080172
+
+Epochs 19
+MAE: 3.5218856
+MdAE: 3.3081884
+
+Epoch train summary---------- Batch size: 41
+Training time: 310.7356517314911
+Eval minimum loss value : 3.6196751594543457
+Eval minimum loss epoch : 15
+Testing MAE: 3.2723367
+Testing MdAE: 3.0486126
+Description added : True

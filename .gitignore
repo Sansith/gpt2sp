@@ -4,3 +4,5 @@ __pycache__
 
 wandb/*
 .ipynb_checkpoints
+*.pth
+bert_classify/*

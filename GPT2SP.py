@@ -4,6 +4,15 @@ from transformers import GPT2Model, GPT2PreTrainedModel
 import torch
 
 
+class RMSLELoss(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.mse = nn.MSELoss()
+        
+    def forward(self, pred, actual):
+        return torch.sqrt(self.mse(torch.log(pred + 1), torch.log(actual + 1)))
+
+
 class GPT2ForSequenceClassification(GPT2PreTrainedModel):
     _keys_to_ignore_on_load_missing = [r"h\.\d+\.attn\.masked_bias", r"lm_head\.weight"]
 
@@ -92,7 +101,7 @@ class GPT2ForSequenceClassification(GPT2PreTrainedModel):
         if labels is not None:
             if self.num_labels == 1:
                 #  We are doing regression
-                loss_fct = nn.L1Loss()
+                loss_fct =  nn.L1Loss() #  RMSLELoss()
                 loss = loss_fct(pooled_logits.view(-1), labels.to(self.dtype).view(-1))
             else:
                 loss_fct = CrossEntropyLoss()

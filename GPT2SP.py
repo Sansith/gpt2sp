@@ -20,8 +20,10 @@ class GPT2ForSequenceClassification(GPT2PreTrainedModel):
         super().__init__(config)
         self.num_labels = config.num_labels
         self.transformer = GPT2Model(config)
-        self.dense1 = nn.Linear(config.n_embd, 4 * config.n_embd, bias=False)
-        self.dense2 = nn.Linear(4 * config.n_embd, config.n_embd, bias=False)
+        self.rnn = nn.LSTM(input_size=config.n_embd, hidden_size=config.n_embd, num_layers=1, batch_first=True)
+
+        # self.dense1 = nn.Linear(config.n_embd, 4 * config.n_embd, bias=False)
+        # self.dense2 = nn.Linear(4 * config.n_embd, config.n_embd, bias=False)
         self.score = nn.Linear(config.n_embd, self.num_labels, bias=False)
 
         self.init_weights()
@@ -68,12 +70,13 @@ class GPT2ForSequenceClassification(GPT2PreTrainedModel):
             return_dict=return_dict,
         )
         hidden_states = transformer_outputs[0]
-                
-        # MLP Layer
-        hidden_states = self.dense1(hidden_states)
-        hidden_states = self.dense2(hidden_states)
         
-        logits = self.score(hidden_states)
+        output, (hn, cn) = self.rnn(hidden_states)
+        # MLP Layer
+        # hidden_states = self.dense1(hidden_states)
+        # hidden_states = self.dense2(hidden_states)
+        
+        logits = self.score(output)
 
         if input_ids is not None:
             batch_size, sequence_length = input_ids.shape[:2]

@@ -10,7 +10,8 @@ class GPT2ForSequenceClassification(GPT2PreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
         self.num_labels = config.num_labels
-        self.transformer = GPT2Model(config)
+        self.transformer_title = GPT2Model(config)
+        self.transformer_description = GPT2Model(config)
         self.dense1 = nn.Linear(2 * config.n_embd, 4 * config.n_embd, bias=False)
         self.dense2 = nn.Linear(4 * config.n_embd, config.n_embd, bias=False)
         self.score = nn.Linear(config.n_embd, self.num_labels, bias=False)
@@ -47,7 +48,7 @@ class GPT2ForSequenceClassification(GPT2PreTrainedModel):
         return_dict = return_dict if return_dict is not None else self.config.use_return_dict
 
         # Title model
-        transformer_outputs_title = self.transformer(
+        transformer_outputs_title = self.transformer_title(
             input_ids_title,
             past_key_values=past_key_values,
             attention_mask=attention_mask,
@@ -64,7 +65,7 @@ class GPT2ForSequenceClassification(GPT2PreTrainedModel):
 
 
         # Description model
-        transformer_outputs_description = self.transformer(
+        transformer_outputs_description = self.transformer_description(
             input_ids_description,
             past_key_values=past_key_values,
             attention_mask=attention_mask,

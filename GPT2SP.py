@@ -104,7 +104,7 @@ class GPT2ForSequenceClassification(GPT2PreTrainedModel):
         if labels is not None:
             if self.num_labels == 1:
                 #  We are doing regression
-                loss_fct =  nn.L1Loss() #  RMSLELoss()
+                loss_fct =  nn.MSELoss() #  RMSLELoss()
                 loss = loss_fct(pooled_logits.view(-1), labels.to(self.dtype).view(-1))
             else:
                 loss_fct = CrossEntropyLoss()
